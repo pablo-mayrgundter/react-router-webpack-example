@@ -10,6 +10,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --port 3000 --inline --hot",
+    "build": "webpack",
     "test": "babel-tape-runner test/*.js"
   },
   "devDependencies": {
