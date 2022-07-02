@@ -2,36 +2,35 @@
 
 An extremely minimal example of using react router, webpack and styled components in development with live reloading...
 
-![](images/react.png)
-![](images/react-router.png)
-![](images/styled-components.png)
-![](images/webpack.png)
+node_modules: 153MB
 
 ## Dependencies
 
-* **react** `16.0.0`
-* **react-router** `4.3.1`
-* **babel** `7.3.3`
-* **webpack** `4.29.4`
-* **styled components** `4.1.3`
+* **react** `17`
+* **react-router** `6`
+* **babel** `7`
+* **webpack** `5.73`
+* **styled components** `5.3`
 
 ## Run Dev
 
 * webpack dev server with hot reloading, no server rendering
 
 ```
-yarn
-yarn dev
+yarn install
+yarn serve
 open http://127.0.0.1:3000
 ```
 
-## Testing
+## Testing & Linting
 
-* Using Enzyme, Tape and Jsdom
+* Testing: jest and jsdom
+* Lint: eslint
 
 ```
 yarn
 yarn test
+yarn lint
 ```
 
 ## License
