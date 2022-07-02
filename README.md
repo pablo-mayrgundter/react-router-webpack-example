@@ -1,4 +1,4 @@
-# [react-router-webpack-example](https://github.com/StevenIseki/react-router-webpack-example)
+# [react-router-webpack-example](https://github.com/pablo-mayrgundter/react-router-webpack-example)
 
 An extremely minimal example of using react router, webpack and styled components in development with live reloading...
 
@@ -9,29 +9,30 @@ An extremely minimal example of using react router, webpack and styled component
 
 ## Dependencies
 
-* **react** `16.0.0`
-* **react-router** `4.3.1`
-* **babel** `7.3.3`
-* **webpack** `4.29.4`
-* **styled components** `4.1.3`
+* **react** `17`
+* **react-router** `6`
+* **babel** `7`
+* **webpack** `5.73`
+* **styled components** `5.3`
 
 ## Run Dev
 
 * webpack dev server with hot reloading, no server rendering
 
 ```
-yarn
-yarn dev
-open http://127.0.0.1:3000
+yarn install
+yarn serve
+# open http://localhost:3000
 ```
 
-## Testing
+## Testing & Lint
 
-* Using Enzyme, Tape and Jsdom
+* Using jest
 
 ```
 yarn
 yarn test
+yarn lint
 ```
 
 ## License
