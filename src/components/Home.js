@@ -1,7 +1,12 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import styled from 'styled-components'
 
+
+/**
+ * Home page.
+ */
 export default class Home extends Component {
+  /** @return {object} React component. */
   render() {
     return (
       <HomeWrapper>

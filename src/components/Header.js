@@ -1,8 +1,13 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
+
+/**
+ * Page header.
+ */
 export default class Header extends Component {
+  /** @return {object} React component. */
   render() {
     return (
       <HeaderWrapper>

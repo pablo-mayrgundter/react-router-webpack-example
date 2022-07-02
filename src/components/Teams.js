@@ -1,46 +1,51 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import { Route } from 'react-router-dom'
+import {Link, Route, Routes} from 'react-router-dom'
 import Team from './Team'
 
-const TEAMS = [
-  { id: 0, title: 'Phoenix Suns', sport: 'Basketball', emoji: '🏀' },
-  { id: 1, title: 'Juventus', sport: 'Soccer', emoji: '⚽️' },
-  { id: 2, title: 'Kolkata Knight Riders', sport: 'Cricket', emoji: '🏏' }
-]
 
-export default class Teams extends Component {
-  render() {
-    const { match } = this.props
-
-    return (
-      <TeamsWrapper>
-        <h2>Teams</h2>
-        <TeamsNav>
-          <nav>
-            {TEAMS.map((t, i) => {
-              return (
-                <Link key={i} to={`${match.url}/${t.title}`}>
-                  {t.title}
-                </Link>
-              )
-            })}
-          </nav>
-        </TeamsNav>
-
-        <Route path={`${match.path}/:title`} component={Team} />
-        <Route
-          exact
-          path={match.path}
-          render={() => <h3>Please select a team.</h3>}
-        />
-      </TeamsWrapper>
-    )
-  }
+/**
+ * Teams page.
+ * @return {object} React component.
+ */
+export default function Teams() {
+  return (
+    <Routes>
+      <Route path="/" element={<TeamsListing/>}/>
+      <Route path=':team_name' element={<Team/>}/>
+    </Routes>
+  )
 }
 
-const TeamsWrapper = styled.div``
+
+/**
+ * @return {object} React component.
+ */
+function TeamsListing() {
+  return (
+    <>
+      <h2>Teams</h2>
+      <TeamsNav>
+        <nav>
+          {TEAMS.map((t, i) => {
+            return (
+              <Link key={i} to={`${location.pathname}/${t.title}`}>
+                {t.title}
+              </Link>
+            )
+          })}
+        </nav>
+      </TeamsNav>
+    </>)
+}
+
+
+const TEAMS = [
+  {id: 0, title: 'Phoenix Suns', sport: 'Basketball', emoji: '🏀'},
+  {id: 1, title: 'Juventus', sport: 'Soccer', emoji: '⚽️'},
+  {id: 2, title: 'Kolkata Knight Riders', sport: 'Cricket', emoji: '🏏'},
+]
+
 
 const TeamsNav = styled.div`
   display: flex;
